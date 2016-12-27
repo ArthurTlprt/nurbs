@@ -3,7 +3,7 @@ disp('TP 10');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1.
 
-function [ x, y ] = NURBS( interval, m, w, xp, yp, t )
+function [ x, y ] = bspline_rationnelle( interval, m, w, xp, yp, t )
   n = length(xp);
   x = zeros(length(interval), 1);
   y = zeros(length(interval), 1);
@@ -38,7 +38,7 @@ w = [1,1/2, 1,1/2, 1,1/2, 1];
 n = length(xp);
 interval = -1:0.01:1;
 
-[x, y] = NURBS( interval, m, w, xp, yp, t);
+[x, y] = bspline_rationnelle( interval, m, w, xp, yp, t);
 
 figure;
 plot(x, y);
@@ -55,7 +55,7 @@ w = [1,sqrt(2)/2, 1,sqrt(2)/2, 1,sqrt(2)/2, 1,sqrt(2)/2, 1];
 
 interval = 0:0.01:sqrt(3)/2+0.5;
 
-[x, y] = NURBS( interval, m, w, xp, yp, t);
+[x, y] = bspline_rationnelle( interval, m, w, xp, yp, t);
 
 % figure;
 % plot(x, y);
@@ -73,7 +73,7 @@ w = [1,1/2, 1,1/2, 1,1/2, 1];
 
 interval = 0:0.01:sqrt(3)/2+0.5;
 
-[x, y] = NURBS( interval, m, w, xp, yp, t);
+[x, y] = bspline_rationnelle( interval, m, w, xp, yp, t);
 
 % figure;
 % plot(x, y);
